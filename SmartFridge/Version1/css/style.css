@@ -1,0 +1,445 @@
+.main-container {
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.warning-overlay {
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warning-overlay span {
+    color: white;
+    text-shadow: #F00 1px 3px 5px;
+    font-size: larger;
+}
+
+@media (min-width: 768px) {
+    .warning-overlay {
+        display: none;
+    }
+}
+
+h2 .title-count {
+    color: #777;
+    font-weight: normal;
+}
+
+h2 .title-count::before {
+    content: '(';
+}
+
+h2 .title-count::after {
+    content: ')';
+}
+
+.meter {
+    margin: 20px 0;
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.meter label {
+    display: block;
+}
+
+.meter label.name::before {
+    content: 'Device Id: ';
+}
+
+.meter label.owner::before {
+    content: 'Owner: ';
+}
+
+.meter label.userId::before {
+    content: 'User Id: ';
+}
+
+.meter label.maxAmpere::before {
+    content: 'Max Ampere: ';
+}
+
+.meter button {
+    float: right;
+    margin-top: -82px;
+}
+
+.alert.no-search-result {
+    margin-top: 20px;
+    display: none;
+}
+
+/* -------------------------------------------------- */
+
+img {
+    width: 500px;
+}
+
+.counter-container {
+    height: 43px;
+    overflow: scroll;
+    margin-top: -217px;
+}
+
+label.image-label {
+    font-size: 42px;
+    color: white;
+    font-family: "American Typewriter", 'Courier', monospace;
+    letter-spacing: 11px;
+    margin-top: -236px;
+    padding-right: 9px;
+    text-shadow: #333 2px 2px 5px;
+}
+
+.counter-container label.counter {
+    font-size: 42px;
+    color: #e8e8e8;
+    font-family: "American Typewriter", 'Courier', monospace;
+    letter-spacing: 11px;
+    /*margin-top: -14px;*/
+    padding-right: 9px;
+    text-shadow: #333 2px 2px 5px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .counter-container label.counter {
+        padding-left: 45px;
+        padding-right: 0;
+    }
+}
+
+.dataList td:nth-of-type(2)::after {
+    content: ' Stück';
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+/* -------------------------------------------------- */
+
+.round-button {
+    margin-left: 30px;
+    margin-top: 20px;
+    width:30%;
+}
+
+.round-button-circle {
+
+    margin-left: 30px;
+    width: 120%;
+    height:0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border:10px solid #cf3b3c;
+    overflow:hidden;
+
+    background: #cf3b3c;
+}
+
+.round-button a {
+    margin-left: 30px;
+    display:block;
+    float:left;
+    width:100%;
+    padding-top:50%;
+    padding-bottom:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+
+
+    text-align:center;
+    color:white;
+    font-style: inherit;
+    text-decoration:none;
+    font-size:1.0em;
+    text-decoration:none;
+}
+
+/* ------------------------Round <a></a>-------------------------- */
+.bottom-label{
+
+    background-color: #f7f7f7;
+    border-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: small;
+}
+
+.label1{
+    color: #777;
+    font-size: xx-large;
+    font-style: inherit;
+    margin-top: 290px;
+    margin-left: 60px;
+    align: left;
+
+}
+
+.label2{
+    color: #777;
+    font-size: xx-large;
+    font-style: inherit;
+    margin-top: 140px;
+    margin-left: 30px;
+    align: left;
+}
+.stylePicker{
+    margin-top: 30px;
+    margin-left: 30px;
+    align: left;
+}
+
+.rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.styled-select {
+    background: transparent;
+    height: 30px;
+    overflow: hidden;
+    width: 240px;
+}
+
+.white   {
+    background-color: white;
+    color: #cf3b3c;
+}
+
+.option1{
+
+    background-color: white;
+    color: #cf3b3c;
+}
+/*-----------------Impressum-----------------------*/
+
+.main-container {
+    margin-top: 15px;
+}
+.teamsmembers {
+    margin: 20px 0;
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.teamsmembers label {
+    display: block;
+}
+
+.teamsmembers label.user::before {
+    content: 'Name: ';
+}
+
+
+.teamsmembers label.job::before {
+    content: 'Job: ';
+}
+
+.teamsmembers button {
+    float: right;
+    margin-top: -82px;
+}
+
+.teamsmembers button {
+
+    color:black;
+    border-color: black;
+    background-color: #dae1ed;
+}
+.teamsmembers button:hover{
+
+    color: black;
+    border-color: black;
+    background-color: #c5cddb;
+}
+/*-----------------Login und Registrieren---------------------------*/
+.btn-primary{
+    color:black;
+    border-color: black;
+    background-color: #dae1ed;
+}
+
+.btn-primary:hover{
+    color: black;
+    border-color: black;
+    background-color: #c5cddb;
+}
+
+.btn-outline-success{
+    color:black;
+    border-color: black;
+    background-color: #dae1ed;
+}
+.btn-outline-success:hover{
+    color: black;
+    border-color: black;
+    background-color: #c5cddb;
+}
+
+.loginB{
+    margin:0 auto;
+    color:black;
+    border-color: black;
+    background-color: #dae1ed;
+}
+
+.loginB:hover{
+    color: black;
+    border-color: black;
+    background-color: #c5cddb;
+}
+
+.wrapper {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-signin2{
+    max-width: 80%;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 30px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.genderselect{
+    margin-left: 10px;
+}
+/*-------------------Barcode.html----------------------*/
+.myButton {
+    background-color:#cf3b3c;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #cf3b3c;
+    display:inline-block;
+    cursor:pointer;
+    color: white;
+    font-family:Arial;
+    font-style: inherit;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:#cf3b3c;
+    color: white;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.myButton2{
+    background-color:#cf3b3c;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #cf3b3c;
+    display:inline-block;
+    cursor:pointer;
+    color: white;
+    font-family:Arial;
+    font-style: inherit;
+    font-size:10px;
+    padding:16px 31px;
+    text-decoration:none;
+}
+
+.myButton2:hover {
+    background-color:#cf3b3c;
+    color: white;
+}
+.myButton2:active {
+    position:relative;
+    top:1px;
+}
+/*---------------------Fusszeile--------------------------------*/
+.fusszeile{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F2F2F2;
+}
+/*---------------------Geburtsdatum-----------------------------*/
+
+.datefield {
+    display: inline;
+    padding: 0.3em;
+    border: inset 1px #CCC;
+    background: #FFF;
+    border-radius: 4px;
+    color: #666;
+}
+
+.datefield * {
+    display: inline-block;
+}
+
+.datefield input {
+    width: 1.7em;
+    padding: 0 0.4em;
+    border: none;
+    font-size: 100%;
+    background: none;
+    color: #000;
+}
+
+.datefield input#year { width:2.5em; }
+.datefield input:focus { outline:none; }

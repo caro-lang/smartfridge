@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/profil.js"></script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+<!--Task: #3739 -->
+<div class="row container-fluid">
+    <div class="col-md-12">
+
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded " >
+            <div class="container">
+
+                <a id = "img" class="navbar-brand" style="margin-right: 100px">Smart Fridge</a>
+
+                <!--Bugfix: #3738 (changed position to relative) -->
+                <button class="navbar-toggler navbar-toggler-right" style="position: relative" type="button"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--End Bugfix: #3738 -->
+
+                <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item">
+                            <a class="nav-link " href="barcode.html" style="margin-right: 40px">Barcode Reader</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="statistik.html" style="margin-right: 40px">Statistiken </a>
+                        </li>
+
+                        <li class="nav-item active" style=" margin-right: 40px">
+                            <a class="nav-link img-responsive" href="index.html" >
+                                <img src="img/Smartfridge_1.png" style="max-width:25px; margin-top: 0px" ></a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 40px">
+                            <a class="nav-link" href="profil.html" style="margin-right: 4px">Profil </a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 4px">
+                            <a class="nav-link" href="einkaufsliste.html" style="margin-right: 4px">Einkaufsliste </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!--End Task: #3739 -->
+<div class="row container-fluid">
+    <div class="container main-container col-md-12" style="margin-top: 80px;">
+        <div class="row">
+            <div class="col-12" style="text-align: center">
+                <h1 class="active" style="margin-bottom: 50px;">Kühlschrankinhalt <span class="id-container">
+                    <img src="img/Benutzerprofil.png" style="max-width:25px; margin-top: -10px;margin-left: 10px" ></span></h1>
+
+                <a href="smarteskochrezept.html" class="myButton"  style="margin-left: 0px; margin-right: auto; margin-bottom: 10%; margin-top: 10px">Smartes Kochrezept</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class=" row " style="margin-top: 20px; margin-left: 2%; margin-right: 2%;">
+    <div class="col-md-12" style="background-color: white;padding-top: 2%;padding-bottom: 10%">
+
+
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            <h4 class="modal-title">Entnahme</h4>
+
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group row" style="margin-left: 0px; margin-top: 0px">
+                                <div class="col-12">
+                                    <label for="stueckanzahl" class="label1" style="margin-left: 0px; margin-top: 20px; font-size: larger">Anzahl</label>
+                                    <input class="form-control" type="number" placeholder="Stückanzahl" id="stueckanzahl" style="margin-left: 0px;text-align: center; width: auto">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label class="label1" style="font-size: medium; margin-top: 40px; margin-left: 20px">ODER</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group row" style="margin-left: 0px; margin-top: 0px">
+                                <div class="col-12">
+                                    <label for="prozent" class="label1" style="margin-left: 0px; margin-top: 20px; font-size: larger">Anteile (in %)</label>
+                                    <input class="form-control prozent-label" type="text" placeholder="Prozentanteil" id="prozent" style="margin-left: 0px;text-align: center; width: auto">
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" style="background-color: #cf3b3c; border: #cf3b3c; font-size: medium; color: white" data-dismiss="modal">entnehmen</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        <table  id="table" class="dataList table">
+            <thead>
+            <tr>
+                <th>Produktname<br><div style="font-size: x-small">haltbar bis</div></th>
+                <th>Anzahl</th>
+                <th>Hersteller</th>
+                <th>Herstellungsland</th>
+                <th>Inhaltsstoffe</th>
+                <th><button type="button" class="btn btn-default" style="background-color: #cf3b3c; border: #cf3b3c;font-size: medium; color: white" data-toggle="modal" data-target="#myModal">entnehmen</button></th>
+
+            </tr>
+            </thead>
+
+            <!-- Placeholder -->
+        </table>
+
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <footer>
+            <div class="wrapper bottom-label ">
+                <div class="fusszeile" id="fusszeile">
+                    <div id="copyright" style="text-align: center; size: 1px">Copyright 2017 IPA Gruppe 5 TU Berlin</div>
+                    <a class="nav-link" style="text-align:center; size: 1px; " href="impressum.html">Impressum</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

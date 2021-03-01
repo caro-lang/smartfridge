@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BarcodeScanner</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+<!--Task: #3739 -->
+<div class="row">
+    <div class="col-md-12">
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded " >
+            <div class="container">
+
+                <a id = "img" class="navbar-brand" style="margin-right: 100px">Smart Fridge</a>
+
+                <!--Bugfix: #3738 (changed position to relative) -->
+                <button class="navbar-toggler navbar-toggler-right" style="position: relative" type="button"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--End Bugfix: #3738 -->
+
+                <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item">
+                            <a class="nav-link " href="barcode.html" style="margin-right: 40px">Barcode Reader</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="statistik.html" style="margin-right: 40px">Statistiken </a>
+                        </li>
+
+                        <li class="nav-item active" style=" margin-right: 40px">
+                            <a class="nav-link img-responsive" href="index.html" >
+                                <img src="img/Smartfridge_1.png" style="max-width:25px; margin-top: 0px" ></a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 40px">
+                            <a class="nav-link" href="profil.html" style="margin-right: 4px">Profil </a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 4px">
+                            <a class="nav-link" href="einkaufsliste.html" style="margin-right: 4px">Einkaufsliste </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!--End Task: #3739 -->
+
+    <div class="row container-fluid">
+        <div class="container main-container col-md-12" style="margin-top: 70px;">
+            <div class="row">
+                <div class="col-12" style="text-align: center">
+                    <h1 class="active">Barcode Reader <span class="id-container">
+                    <img src="img/BarcodeScanner_1.png" style="max-width: 30px; max-height: 30px;margin-left: 10px; margin-top: -6px" ></span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" row " style="margin-top: 40px; margin-left: 2%; margin-right: 2%;">
+
+        <div class="col-md-3" style="background-color: #F2F2F2;padding-top: 2%;padding-bottom: 10%">
+                <div class="form-inline" style="text-align:left">
+                    <label class="label1" style="color: #636c72;margin-left: 40px;margin-top: 0px; font-size:large"><b>Anzahl</b></label>
+                    <br />
+                    <input type="number" class="form-control" name="amount" style="width: 100px; margin-top: 10px; margin-left: 40px;padding-right: auto"/>
+                </div>
+
+                <a href="#" class="myButton" style="margin-left: 40px; margin-right: auto; margin-bottom: 10%; margin-top: 50px">hinzufügen</a>
+        </div>
+
+        <div class="col-md-1 ">
+        </div>
+
+        <div class="col-md-8" style="background-color: #F2F2F2; padding-top: 2%; padding-bottom: 10%">
+            <label class="label1" style="text-align: left; margin-top: 0px; font-size: large">Bitte geben Sie den Barcode manuell ein oder scannen diesen mit einem Barcodescanner.</label>
+
+            <div class="form-inline">
+                <input type="number" class="form-control" name="barcode" placeholder="Barcode" required="" autofocus="" style="margin-left: 60px; width: auto;"/>
+
+
+                <a href="#" class="myButton" style="margin-top: 10px; margin-left: 60px; margin-bottom: 10px">Check Product</a>
+
+
+            </div>
+
+
+
+            <div class="form-group row" style="margin-left: 10px; margin-top: 50px">
+                <div class="col-4">
+                    <label for="product-input" class="col-2 col-form-label">Produktname</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Name" id="product-input">
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-left: 10px;">
+                <div class="col-4">
+                    <label for="category-input" class="col-2 col-form-label">Hauptkategorie</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Hauptkategorie" id="category-input">
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-left: 10px;">
+                <div class="col-4">
+                    <label for="category-sub-input" class="col-2 col-form-label">Subkategorie</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Subkategorie" id="category-sub-input">
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-left: 10px;">
+                <div class="col-4">
+                    <label for="producer-input" class="col-2 col-form-label">Hersteller</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Hersteller" id="producer-input">
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-left: 10px;">
+                <div class="col-4">
+                    <label for="producer-land-input" class="col-2 col-form-label">Herstellungsland</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Hersteller" id="producer-land-input">
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-left: 10px;">
+                <div class="col-4">
+                    <label for="material" class="col-2 col-form-label">Produktmaterial</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Material" id="material">
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-left: 10px;">
+                <div class="col-4">
+                    <label for="inhalt" class="col-2 col-form-label">Inhaltsstoffe</label>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6" style="margin-left: 20px">
+                    <input class="form-control" type="text" placeholder="Inhaltsstoffe" id="inhalt">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+    <div class="col-md-12">
+        <footer>
+            <div class="wrapper bottom-label ">
+                <div class="fusszeile" id="fusszeile">
+                    <div id="copyright" style="text-align: center; size: 1px">Copyright 2017 IPA Gruppe 5 TU Berlin</div>
+                    <a class="nav-link" style="text-align:center; size: 1px; " href="impressum.html">Impressum</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

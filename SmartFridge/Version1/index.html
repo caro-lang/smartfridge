@@ -1,0 +1,127 @@
+<!-- Task: #3742 -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>SmartFridge</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<!--Task: #3739 -->
+<div class="row container-fluid">
+    <div class="col-md-12">
+
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded " >
+            <div class="container">
+
+                <a id = "img" class="navbar-brand" style="margin-right: 100px">Smart Fridge</a>
+
+                <!--Bugfix: #3738 (changed position to relative) -->
+                <button class="navbar-toggler navbar-toggler-right" style="position: relative" type="button"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--End Bugfix: #3738 -->
+
+                <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item">
+                            <a class="nav-link " href="barcode.html" style="margin-right: 40px">Barcode Reader</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="statistik.html" style="margin-right: 40px">Statistiken </a>
+                        </li>
+
+                        <li class="nav-item active" style=" margin-right: 40px">
+                            <a class="nav-link img-responsive" href="index.html" >
+                                <img src="img/Smartfridge_1.png" style="max-width:25px; margin-top: 0px" ></a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 40px">
+                            <a class="nav-link" href="profil.html" style="margin-right: 4px">Profil </a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 4px">
+                            <a class="nav-link" href="einkaufsliste.html" style="margin-right: 4px">Einkaufsliste </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+</div>
+<!--End Task: #3739 -->
+
+<div class="row container-fluid">
+    <div class="col-md-4">
+        <label class="label1">Hallo Benutzername!</label>
+    </div>
+
+    <div class="col-md-4">
+        <img src="img/Smartfridge.png" style="width: 120%; margin-top: 110px; margin-left: -45px" align="middle">
+    </div>
+
+    <div class="col-md-4">
+        <label class="label2">Wähle deinen <br/>Kühlschrank aus!</label>
+        <div>
+
+            <select class="styled-select white rounded stylePicker" >
+                <option class="option1">SM12344</option>
+                <option class="option1">SM12784</option>
+                <option class="option1">SM12894</option>
+                <option class="option1">SM12311</option>
+            </select>
+        </div>
+
+        <div class="round-button">
+            <div class="round-button-circle">
+                <a href="index.html" class="round-button" style="margin-left: 0px">Öffnen</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <footer>
+            <div class="wrapper bottom-label ">
+                <div class="fusszeile" id="fusszeile">
+                    <div id="copyright" style="text-align: center; size: 1px">Copyright 2017 IPA Gruppe 5 TU Berlin</div>
+                    <a class="nav-link" style="text-align:center; size: 1px; " href="impressum.html">Impressum</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+</div>
+<!-- JS Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<!-- End Task: #3742 -->

@@ -1,0 +1,173 @@
+<!--Task: #3741 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Statistik</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/RGraph/RGraph.bar.js"></script>
+    <script src="js/RGraph/RGraph.common.core.js" ></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+<!--Task: #3739 -->
+<div class="row container-fluid">
+    <div class="col-md-12".col-md-12>
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded " >
+            <div class="container">
+
+                <a id = "img" class="navbar-brand" style="margin-right: 100px">Smart Fridge</a>
+
+                <!--Bugfix: #3738 (changed position to relative) -->
+                <button class="navbar-toggler navbar-toggler-right" style="position: relative" type="button"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--End Bugfix: #3738 -->
+
+                <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item">
+                            <a class="nav-link " href="barcode.html" style="margin-right: 40px">Barcode Reader</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="statistik.html" style="margin-right: 40px">Statistiken </a>
+                        </li>
+
+                        <li class="nav-item active" style=" margin-right: 40px">
+                            <a class="nav-link img-responsive" href="index.html" >
+                                <img src="img/Smartfridge_1.png" style="max-width:25px; margin-top: 0px" ></a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 40px">
+                            <a class="nav-link" href="profil.html" style="margin-right: 4px">Profil </a>
+                        </li>
+
+                        <li class="nav-item" style="margin-right: 4px">
+                            <a class="nav-link" href="einkaufsliste.html" style="margin-right: 4px">Einkaufsliste </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!--End Task: #3739 -->
+
+<!--Feature: #3713 -->
+    <div class="row container-fluid container main-container" style="margin-top: 80px">
+
+        <div class="col-md-5" style="text-align: center;">
+
+            <h1 class="active" style="margin-bottom: 50px; margin-top: 50px">Füllstatistik <span class="id-container"> <img src="img/Statistiken.png" style="max-width:25px; margin-top: -10px;margin-left: 10px" ></span></h1>
+
+            <canvas width="500" height="250" id="canvas" style="text-align: center;" >
+                Canvas
+            </canvas>
+
+            <script>
+                var data = [100,45,80];
+                var bar = new RGraph.Bar({
+                    id: 'canvas',
+                    data: data,
+                    options: {
+                        labels: ['Milchprodukte', 'Obst/Gemüse', 'Fleisch'],
+                        gutterLeft: 45,
+                        backgroundBarcolor1: 'white',
+                        backgroundBarcolor2: 'white',
+                        backgroundGrid: true,
+                        colors: ['#cf3b3c'],
+                        shadow: false,
+                        unitsPost: '%',
+                        labelsAbove: true,
+                        noaxes: true,
+                    }
+                }).draw();
+
+            </script>
+
+            <a href="#" class="myButton" style="margin-bottom: 10px; margin-top: 20px; position: inherit">Berechnen</a>
+
+        </div>
+
+        <div class="col-lg-2">
+            <label style="width: 50px; text-align: center" ></label>
+        </div>
+
+        <div class="col-md-5" style="text-align: center">
+            <h1 class="activ" style="margin-bottom: 50px; margin-top: 50px">Konsumstatistik <span class="id-container">
+                <img src="img/Statistiken.png" style="max-width:25px; margin-top: -10px;margin-left: 10px" ></span></h1>
+
+            <canvas width="500" height="250" id="canvas2" style="text-align: center;">
+                    Canvas2
+            </canvas>
+            <script>
+                var data2 = [];
+
+                var bar2 = new RGraph.Bar({
+                    id: 'canvas2',
+                    data: data2,
+                    options: {
+                        labels: ['Getränke', 'Essen'],
+                        gutterLeft: 45,
+                        backgroundBarcolor1: 'white',
+                        backgroundBarcolor2: 'white',
+                        backgroundGrid: true,
+                        unitsPost: '%',
+                        colors: ['#cf3b3c'],
+                        labelsAbove: true,
+                        noaxes: true
+                    }
+                }).draw();
+
+            </script>
+
+            <a href="#" class="myButton" style="margin-bottom: 10px; margin-top: 20px; position: inherit">Berechnen</a>
+
+        </div>
+
+    </div>
+<!--End Feature: #3713 -->
+
+<div class="row">
+    <div class="col-md-12">
+        <footer>
+            <div class="wrapper bottom-label ">
+                <div class="fusszeile" id="fusszeile">
+                    <div id="copyright" style="text-align: center; size: 1px">Copyright 2017 IPA Gruppe 5 TU Berlin</div>
+                    <a class="nav-link" style="text-align:center; size: 1px; " href="impressum.html">Impressum</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+</div>
+<!-- JS Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+<!--End Task: #3741 -->
